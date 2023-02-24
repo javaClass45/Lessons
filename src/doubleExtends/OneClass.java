@@ -4,7 +4,7 @@ public abstract class OneClass {
     int a = 3;
     String b = "abstract example";
 
-    void OneMethod() {
+    void oneMethod() {
         System.out.println("OneMethod");
     }
 

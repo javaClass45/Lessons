@@ -7,7 +7,7 @@ public class TwoClass extends OneClass {
     int d = 20;
 
 
-    void TwoMethod() {
+    void twoMethod() {
         System.out.println("TwoMethod");
     }
 

@@ -2,7 +2,7 @@ package doubleExtends;
 
 public class FourClass {
 
-    void OneMethod() {
+    void oneMethod() {
         System.out.println("OneMethod in FourClass");
     }
 

@@ -3,10 +3,11 @@ package doubleExtends;
 public class ThreeClass extends TwoClass {
 
     //@Override
-    void OneMethod() {
+    void oneMethod() {
         System.out.println("ThreeMethod");
 
     }
+
 
 
 }

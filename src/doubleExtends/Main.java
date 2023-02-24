@@ -3,19 +3,19 @@ package doubleExtends;
 public class Main {
     public static void main(String[] args) {
         ThreeClass threeClass = new ThreeClass();
-        threeClass.OneMethod();
-        threeClass.TwoMethod();
+        threeClass.oneMethod();
+        threeClass.twoMethod();
         FourClass fourClass = new FourClass();
-        fourClass.OneMethod();
+        fourClass.oneMethod();
 
         OneClass oneClass = new OneClass() {
             @Override
-            void OneMethod() {
-                super.OneMethod();
+            void oneMethod() {
+                super.oneMethod();
             }
         };
 
-        oneClass.OneMethod();
+        oneClass.oneMethod();
         System.out.println("oneClass.b = " + oneClass.b);
         System.out.println("TwoClass.c = " + TwoClass.c);
 
