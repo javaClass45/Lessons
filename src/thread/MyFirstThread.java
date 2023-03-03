@@ -7,13 +7,13 @@ public class MyFirstThread extends Thread {
 
     }
 
-//    public static void main(String[] args) {
-//
-//        MyFirstThread myFirstThread = new MyFirstThread();
-//        myFirstThread.start();
-//
-//
-//    }
+    public static void main(String[] args) {
+
+        MyFirstThread myFirstThread = new MyFirstThread();
+        myFirstThread.start();
+
+
+    }
 
 
 }
