@@ -1,6 +1,5 @@
 package email;
 
-import calc.Solution;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
@@ -16,8 +15,8 @@ public class MailSender {
 
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        solution.sendMail("name.lastname@gmail.com", "password", "friend@gmail.com");
+        MailSender mailSender = new MailSender();
+        mailSender.sendMail("name.lastname@gmail.com", "password", "friend@gmail.com");
     }
 
     public void sendMail(final String username, final String password, final String recipients) {
