@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 
-public class Str {
+public class MyStringMore {
     public static void main(String[] args) {
 
         String s = "работать со строкой, как с массивом символов";
@@ -52,8 +52,11 @@ public class Str {
         Comparator<Integer> comparator = Comparator.comparingInt(o -> o);
         comparator.hashCode();
 
+        StringBuffer name = new StringBuffer("book");
+        System.out.println("name = " + name);
 
-
+        StringBuilder nameStringBuilder = new StringBuilder("nameStringBuilder");
+        System.out.println("nameStringBuilder = " + nameStringBuilder);
 
 
         AtomicInteger atomicInteger = new AtomicInteger();
