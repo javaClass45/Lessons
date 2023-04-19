@@ -21,7 +21,7 @@ public class LottoApplet extends JApplet implements ActionListener {
         pnl.add(btn);
         btn.addActionListener(this);
 
-        // Background color selecter.
+        // Background color selector.
         String bgStr = getParameter("BgColor");
         int bgHex = Integer.parseInt(bgStr, 16);
         pnl.setBackground(new java.awt.Color(bgHex));
