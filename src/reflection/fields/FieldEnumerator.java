@@ -3,20 +3,30 @@ package reflection.fields;
 import collections.CarArrayList;
 
 import java.lang.reflect.Field;
+import java.lang.Class;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Spliterator;
 
-public class FieldEnumerator {
 
-    private final ArrayList<Field> fields = new ArrayList<>();
+//todo  от 1 до 2 блок не дописан, ошибки закоментированы
+//1
+public class FieldEnumerator  {
+
+    private ArrayList<Field> fields;
     private Object object;
+
+
+    private ArrayList<Field> incognito() {
+        fields = new ArrayList<>();
+        return fields;
+    }
 
     public FieldEnumerator() {
     }
 
-
+//2
     public FieldEnumerator(Object object) {
         this.object = object;
         Field[] fieldArray = object.getClass().getDeclaredFields();
@@ -37,12 +47,12 @@ public class FieldEnumerator {
         this.object = object;
     }
 
-    @Override
+//    @Override
     public Iterator<Field> iterator() {
         return new FieldIterator();
     }
 
-    @Override
+//    @Override
     public Spliterator<Field> spliterator() {
         return null;
     }
@@ -65,12 +75,12 @@ public class FieldEnumerator {
             Field field = fields.get(position);
             field.setAccessible(true);
             position++;
-            try {
-                return new Field(field.getName(),
-                        field.get(object));
-            } catch (IllegalAccessException e) {
-                return null;
-            }
+//            try {
+//                return new Field(field.getName(),
+//                        field.get(object));
+//            } catch (IllegalAccessException e) {
+//                return null;
+//            }
 
 
             return null;
