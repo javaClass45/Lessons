@@ -71,4 +71,30 @@ public class Users {
                 "name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Users)) return false;
+
+        Users users = (Users) o;
+
+        if (getId() != users.getId()) return false;
+        if (getPhone() != users.getPhone()) return false;
+        if (getAge() != users.getAge()) return false;
+        if (isWinner() != users.isWinner()) return false;
+        if (getName() != null ? !getName().equals(users.getName()) : users.getName() != null) return false;
+        return getSex() == users.getSex();
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getId();
+        result = 31 * result + getPhone();
+        result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+        result = 31 * result + getAge();
+        result = 31 * result + (getSex() != null ? getSex().hashCode() : 0);
+        result = 31 * result + (isWinner() ? 1 : 0);
+        return result;
+    }
 }
