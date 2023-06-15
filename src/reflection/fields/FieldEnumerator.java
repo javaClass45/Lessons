@@ -1,6 +1,7 @@
 package reflection.fields;
 
 import collections.CarArrayList;
+import org.junit.platform.commons.util.ReflectionUtils;
 
 import java.lang.reflect.Field;
 import java.lang.Class;
@@ -58,7 +59,6 @@ public class FieldEnumerator implements Iterable<Field>  {
 
     public class FieldIterator implements Iterator<Field> {
 
-
         private int position = 0;
 
         private FieldIterator() {
@@ -71,15 +71,16 @@ public class FieldEnumerator implements Iterable<Field>  {
 
         @Override
         public Field next() {
-            java.lang.reflect.Field field = fields.get(position);
+            Field field = fields.get(position);
             field.setAccessible(true);
+//            ReflectionUtils.makeAccessible(field);
             position++;
-            try {
-                return new java.lang.reflect.Field(field.getName(),
-                        field.get(object));
-            } catch (IllegalAccessException e) {
-                return null;
-            }
+//            try {
+//                return new Field(field.get(object),
+//                        field.getName()));
+//            } catch (IllegalAccessException e) {
+//                return null;
+//            }
 
 
             return null;
