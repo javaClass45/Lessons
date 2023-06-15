@@ -17,8 +17,12 @@ public class Forich {
             System.out.print(ca + " " + i++ + " ");
         }
         System.out.println("\n" +i + " simvolov");
+        System.out.println("length chArr = " + chArr.length);
         System.out.println(Arrays.toString(chArr));//печатаем массив "правильно"
 
+        for (Object o : chArr) {
+            System.out.print(o.toString());
+        }
 
     }
 }
