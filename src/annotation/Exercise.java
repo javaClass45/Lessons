@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface Exercise {
+public @interface Exercise  {
     String value();
 
     Level complexityLevel() default Level.BASIC;
