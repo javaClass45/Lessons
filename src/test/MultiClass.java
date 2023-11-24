@@ -30,3 +30,4 @@ class B extends A {
         System.out.println("method_B_Class");
     }
 }
+
