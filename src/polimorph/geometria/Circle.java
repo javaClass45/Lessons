@@ -15,7 +15,7 @@ public class Circle implements Shape {
     }
 
     @Override
-    public void erase() {
+    public void     erase() {
         str = "eraze Circle";
         System.out.println(str);
     }
