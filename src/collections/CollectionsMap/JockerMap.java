@@ -18,7 +18,9 @@ public class JockerMap {
             }});
         }};
 
-        System.out.println(map.toString());
+        System.out.println(map);
+
+        
 
     }
 }
